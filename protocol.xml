@@ -113,6 +113,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>100</DefaultValue>
 			</Interprete>
+			<!-- SuppressValidator 2.11.1 No range needed -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Rows</Units>
@@ -124,6 +125,7 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 			</Display>
+			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
@@ -137,6 +139,7 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<!-- SuppressValidator 2.11.1 No range needed -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Rows</Units>
@@ -148,6 +151,7 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 			</Display>
+			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
@@ -201,9 +205,11 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
 			</Interprete>
+			<!-- SuppressValidator 2.5.1 No default threshold, this is a choice for the user. -->
 			<Alarm>
 				<Monitored>true</Monitored>
 			</Alarm>
+			<!-- /SuppressValidator 2.5.1 -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -284,6 +290,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<Normal>604800</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -327,9 +334,11 @@ Any inquiries can be addressed to:
 			<Description>Maximum Row Count</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is how many rows that are allowed before rows are getting removed from the table.
-				There is an offset that will delete 20% extra rows.
-			Example: If there are 120 rows in the table and the maximum row count is 100, it will delete 40 rows so that there are 80 rows left in the table.</Subtext>
+				<Subtext>
+					This is how many rows that are allowed before rows are getting removed from the table.
+					There is an offset that will delete 20% extra rows.
+					Example: If there are 120 rows in the table and the maximum row count is 100, it will delete 40 rows so that there are 80 rows left in the table.
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -339,6 +348,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<Normal>500</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
