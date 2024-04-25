@@ -335,9 +335,10 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
+					<![CDATA[
 					This is how many rows that are allowed before rows are getting removed from the table.
 					There is an offset that will delete 20% extra rows.
-					Example: If there are 120 rows in the table and the maximum row count is 100, it will delete 40 rows so that there are 80 rows left in the table.
+					Example: If there are 120 rows in the table and the maximum row count is 100, it will delete 40 rows so that there are 80 rows left in the table.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
