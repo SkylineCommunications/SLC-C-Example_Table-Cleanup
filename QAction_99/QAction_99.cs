@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
-using System.Text;
 
 using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Utils.TableCleanup;
@@ -21,16 +17,16 @@ public static class QAction
 	{
 		try
 		{
-			TableCleaner tableCleaner = new TableCleaner(
-				protocol,
-				Parameter.Traps.tablePid,
-				Parameter.Traps.Idx.trapsindex_201,
-				Parameter.Traps.Idx.trapsdatetime_202)
-			.WithCondition(new TableMaxRowCondition(
-				Parameter.cleanupmethod_100,
-				Parameter.maximumrowcount_104,
-				Parameter.maximumrowage_102))
-			.Cleanup();
+			var tableCleaner = new TableCleaner(
+					protocol,
+					Parameter.Traps.tablePid,
+					Parameter.Traps.Idx.trapsindex_201,
+					Parameter.Traps.Idx.trapsdatetime_202)
+				.WithCondition(new TableMaxRowCondition(
+					Parameter.cleanupmethod_100,
+					Parameter.maximumrowcount_104,
+					Parameter.maximumrowage_102))
+				.Cleanup();
 		}
 		catch (Exception ex)
 		{
